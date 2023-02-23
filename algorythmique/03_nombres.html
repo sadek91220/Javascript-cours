@@ -1,0 +1,87 @@
+<!-- Le javascript sert à créer des sites interactifs, il permet aussi d'avoir une meilleur experience utilisateur (meilleur referencement au niveau moteur de recherche) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Les nombres">
+    <title>JS - Les nombres</title>
+</head>
+<body>
+    <script>
+// pour initialiser un nombre il suffit de l'ecrire sans guillemets
+
+        const a = 5 * 10;
+        const b = 10 / 2;
+        const c = 15 - 5;
+        const d = 5 % 10;
+        console.log(d)
+// nous pourrons effectuer tout types de calculs
+        const e = a + b;
+        console.log(e)
+
+// addition:
+        let addition = 10 + 5;
+        document.write("Le résultat de l'addition 10 + 5 = " + addition + "<br>")
+        // on concatène avec une chaine de caractere avec le signe "+"
+
+// soustraction:
+
+        let soustraction = 16 - 4
+        document.write("Le résultat de la soustraction 16 - 4 = " + soustraction + "<br>")
+
+// multiplication:
+        let multiplication = 5 * 4
+        document.write("Le résultat de la multiplication 5 * 4 = " + multiplication + "<br>")
+
+// division:
+        let division = 20 / 4
+        document.write("Le résultat de la division 20 / 4 = " + division + "<br>")
+
+// modulo:
+        let modulo = 10 % 3
+        document.write("Le résultat de 10 modulo 3 est égal à " + modulo + "<br>")
+
+
+//--------------------Les raccourcis-------------------//
+
+        let g = 10;
+        g = g + 5;   // du coup g = 15
+        console.log(g) 
+        g +=5 ;      // du coup g = 20 (g=15+5)
+        console.log(g)
+        // g = g + 5 c'est pareil que g +=5, choisir l'un ou l'autre
+
+
+//-------------------Incrémentation et décrémentation---------------------//
+
+// nous pouvons ajouter 1 ou enlever 1 discretement avec ++ ou --
+        let h = 50;
+        h++ // +1=51
+        h-- // -1=50
+        console.log(h)
+
+
+// Exercice:
+        //récuperez dans un prompt la valeur souhaitée par l'utilisateur
+        // envoyer une alerte indiquant le résultat au carré et au cube de la valeur 
+
+        let valeur = prompt("entrez votre valeur");
+        let valeurAuCarré = valeur * valeur;
+        let valeurAuCube = valeur * valeur * valeur;
+        alert(" le résultat au carré: " + valeurAuCarré + " Le résultat au cube: " + valeurAuCube);
+
+        
+
+        
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

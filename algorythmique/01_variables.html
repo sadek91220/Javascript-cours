@@ -1,0 +1,54 @@
+<!-- Le javascript sert à créer des sites interactifs, il permet aussi d'avoir une meilleur experience utilisateur (meilleur referencement au niveau moteur de recherche) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Variable">
+    <title>JS - Variable</title>
+</head>
+<body>
+    
+<!-- soit on rentre directement le code JS dans la page html (moins utilisé, en fin de body) -->
+    <script>
+// commentaire en JS en une ligne (//) 
+
+/*
+ commentaire pour un bloc de texte sur plusieures lignes
+*/
+
+// //------------------------------ Les Variables ------------------------------// //
+// les variables sont comme des boites.
+// vous pouvez y stocker ce que vous souhaitez, on  initialise une variable avec son nom, puis on lui attribut une valeur.
+// pour déclarer une variable on utilise un prefixe:
+// ATTENTION: on utilise les prefixes seulement lors de l'initialisation
+//  - const pour constante, c'est une valeur constante, ne peut étre modifiée
+//  - let
+//  - var (obsolète)
+
+        const test = "hello world"
+        console.log(test)
+        // pour afficher une information que je viens de saisir ou une erreur produite lors de la programation
+        // test = "hello guys" provoque une erreur car on a declaré test comme valeur constante
+
+        var test2 = "bonjour la mif!"
+        console.log(test2)
+
+        let test3 = "bonjour Colombbus!"
+        console.log(test3)
+        test3 = "10mentionweb"
+        console.log(test3)
+        // avec le prefixe let je peux changer la valeur de ma variable
+        // les caracteres acceptés: de 0 à 9 (même 11 et 12 etc..), de A à Z, + $ _ mais jamais en premier ou dernier caractére 
+        // la valeur d'une variable peut être de different type comme des mots ou des chiffres
+
+        var test4 = "10"; // il affichera le texte entre les guillemets
+        var test5 = 10; // il prendra la valeur (pour l'addiotioner etc...)
+    </script>
+
+<!-- soit on appelle le fichier JS correspondant (le plus utilisé, toujours en fin de body) -->
+    <script src="./variable.js"></script>
+</body>
+</html>

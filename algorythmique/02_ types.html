@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Les types">
+    <title>JS - Les types</title>
+</head>
+<body>
+
+    <script>
+//---------------Les differents types de valeurs---------------//
+
+// Il existe plusieurs types de valeures que l'ont peut assigner à nos variables:
+        // on a les chaines de caracteres (les strings) cela peut être une phrase entre guillemets , simple ou double
+        // les nombres : 5, 10, 12.8
+        // booléen: en true ou false
+        // tableau (array) : entre crochets ["Julien", 10]
+        // null
+        // classes
+        // objets
+        // fonctions
+
+// String :
+        let variable = "test"
+        console.log(variable);
+        let variable2 = 'test2'
+        console.log(variable2);
+        // en JS la convention de nommage est le camelCase, après le premier mot chaque nouveau mot de votre variable doit être en majuscule
+        let monTexte = "Voici une phrase écrite en double quote"
+        console.log(monTexte);
+        let monTexte2 = 'Voici une phrase écrite en simple quote'
+        console.log(monTexte2);
+
+// Number :
+        let chiffre = 55;
+        //sans les quotes pour les numbers (tout les chiffres: les positifs, les negatifs et les decimaux)
+        console.log(chiffre)
+
+//  Booléen :
+            // il n'a que 2 valeures: true ou false
+        let choix = true;
+        console.log(choix);
+        let choix2 = false;
+        console.log(choix2);
+
+
+
+
+        
+
+// afin de verifier le type d"une variable on utilise typeof(), à mettre dans les parenthese du console log:
+        console.log(typeof(variable2));
+
+
+//---------------------Les Affichages---------------------//
+// pour voir nos variables dans le html
+        document.write(variable);
+
+//les boites de dialogues:
+
+        // alert("Ceci est un message d'alerte!") : pour faire une alerte 
+        // confirm("Confirmez vous?"); : pour une demande de confirmation
+        // prompt("voici un prompt"); :pour recuperer une donnée de l'utilisateur
+
+        let monAge = prompt("Quel est mon age ?")
+        console.log(monAge)
+
+    </script>
+
+
+</body>
+</html>
