@@ -1,0 +1,223 @@
+<!-- Le javascript sert à créer des sites interactifs, il permet aussi d'avoir une meilleur experience utilisateur (meilleur referencement au niveau moteur de recherche) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Les tableaux">
+    <title>JS - Les tableaux</title>
+</head>
+<body>
+    <script>
+       
+//-----------------------------Les Tableaux---------------------------------//
+
+        //------Les tableaux indexés------//
+
+        let monTableau = [];
+        console.log(monTableau);
+        // premire methode pour declarer un tableau
+
+        let myArray = new Array; 
+        //deuxieme façon de declarer un tableau
+
+//myArray et monTableau sont des tableaux qui peuvent contenir plusieures informations
+
+//Affecter des valeures a nos tableaux
+// a-
+        let nosPrenoms = ["Sancy", "Choaieb", "Gregory"]
+        console.log(nosPrenoms);
+
+// b-
+        monTableau[0]= "Patrick"
+        monTableau[1]= "Sahar"
+        monTableau[2]= "Yacine"
+        monTableau[3]= "Bechir"
+        monTableau[4]= "Justine"
+        //Affiche l'index[3] de mon tableau
+        console.log(monTableau[3]);
+
+
+        //on va créer deux tableaux indéxés
+        let listeDePrenoms = ["Mana ", "Laurence ", "Zaahid "]
+        let listeDeNoms = ["Heddar ", "Wattier ", "Ali "]
+        let annuaire = [listeDePrenoms, listeDeNoms]
+        document.write(annuaire + "<br>");
+        console.log(annuaire)
+
+        document.write("<br>" + annuaire [0][0] + annuaire [1][0] + "<br>" + annuaire [0][1] + annuaire [1][1] + "<br>" + annuaire [0][2] + annuaire [1][2] + "<br>" + "<br>")
+
+        // ou 
+
+        // document.write("<br>" + annuaire[0][0] + annuaire[1][0] + "<br>") //Mana Heddar
+        // document.write(annuaire[0][1] + annuaire[1][1] + "<br>") //Laurence Wattier
+        // document.write(annuaire[0][2] + annuaire[1][2] + "<br>") //Zaahid Ali
+
+
+    //---autre exemple---//
+        let tableau = [
+                //0
+                [   //0       //1     //2
+                    "prenom", "nom", "tel"
+                ],
+                //1
+                [   //0        //1      //2
+                    "Hasna", "Godart", "3365849785"
+                ]
+            ]
+
+//exercice:
+//Nom : Godart , Prenom : Hasna, telephone: 3365849785
+
+
+            document.write("Nom " + " : " + tableau[1][1] + ", " + "Prenom " + " : " + tableau[1][0] + ", " + "Tel " + " : " + tableau[1][2])
+
+        //Tableaux non-indéxés:
+
+        let coordonnées = {
+            prenom: "Sahar",
+            nom: "ferchichi",
+            age: 80,
+            tel: 1608400111,
+        };
+
+        //afficher toutes les informations de mon tableau
+        console.log(coordonnées);
+        //afficher le prenom
+        console.log(coordonnées['prenom']);
+        console.log(coordonnées.prenom);
+
+        let contact = [
+            {prenom:"Linda", nom:"Bentouil", tel:"1122334455"},
+            {prenom:"Maryam", nom:"Cisse", tel:"1122834455"},
+            {prenom:"Rayen", nom:"Daly", tel:"1122374455"}
+        ]
+        console.log(contact)
+        console.log(contact[1].nom);
+
+    //ou
+
+        console.log(contact[1]['nom']);
+
+
+
+
+
+//----------------Tableaux à quatre dimensions----------------------//
+
+        let array4Dimensions = [
+        {
+            prenom: "hugo",
+            nom: "Liegeard", 
+            coordonnees: {
+                email: "Hugo.Liegeard@colombbus.org",
+                tel: {
+                    fixe: 1125455989,
+                    fax: 11225544887,
+                    port:{
+                        privé: 3621548798,
+                        pro: 1665548798
+                    }
+                },
+                adresse: {
+                    ville: "Evry",
+                    cp: 91000,
+                    pays: {
+                        code: "Fr",
+                        nom: "France"
+                    }
+                }
+            }
+        }
+        
+        ]
+
+        console.log(array4Dimensions[0].coordonnees.email);
+        console.log(array4Dimensions[0]["coordonnees"]["email"]);
+
+        console.log(array4Dimensions[0].coordonnees.adresse.pays.code);
+
+
+//---------------------Les propriétées et les methodes des tableaux------------------------------------//
+
+        let couleur = ["rouge", "jaune", "vert"]
+        console.log(couleur);
+        longueurtableau = couleur.length; // length c'est la propriété pour afficher la longueur des éléments
+
+        console.log(longueurtableau);
+
+        //ou
+
+        console.log(couleur.length);
+
+    //pour ajouter un élément à la fin de notre tableau j'utilise la methode push
+
+        couleur.push("violet")
+        console.log(couleur)
+
+    //pour supprimer un élément à la fin de notre tableau j'utilise la methode pop
+
+        couleur.pop()
+        console.log(couleur)
+
+    //pour ajouter un élément ou des éléments au début de notre tableau j'utilise la methode unshift
+
+        couleur.unshift("rose", "orange")
+        console.log(couleur);
+
+    //pour ajouter, supprimer ou remplacer un élément 'nimporte ou dans notre tableau j'utilise la methode splice:
+        //cette methode va prendre 3 arguments:
+            //- une position de départ à partir d'ou commence le changement
+            //- le nombre d'élément à remplacer ou à enlever
+            //- les éléments a ajouter au tableau
+
+            couleur.splice(1,0,"turquoise","noir")
+            console.log(couleur);
+
+            couleur.splice(2,1,"bleu")
+            console.log(couleur);
+
+
+//Pour decouper un tableau et en créer un autre on utilise la methode slice
+// Premier argument: la position de départ : ou doit commencer notre decoupage
+        //- si la position passée est un nombre negatif, le debut de la decoupe sera calculer a partir de la fin du tableau de depart, 
+        //- si la position de depart n'est pas passée la decoupe commencera depuis le debut du tableau de depart
+
+// Deuxieme argument: la position ou doit s'arreter le decoupage
+        //- si la position passée est un nombre negatif alors la fin de la decoupe sera calculée a partir de la fin du tableau de depart
+        //- si aucune position de fin n'est passée alors on recuperer le tableau de depart jusqu'a la fin pour créer un nouveau tableau
+
+        let jourSemaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+        let jourDeTravail = jourSemaine.slice(0,5)
+        console.log(jourDeTravail); //le  nouveau tableau crée ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi']
+
+        jourDeTravail.splice(2,1)
+        jourDeTravailColombbus = jourDeTravail
+        console.log(jourDeTravailColombbus);
+        
+
+        //pour choisir le separateur entre les elements j'utilise la methode join : cela retourne une chaine de caracteres créée en concatenant les differentes valeures d'un tableau
+
+        let concatCouleur = couleur.join(" - ");
+        console.log(concatCouleur);
+        document.write("<br>" + concatCouleur)
+
+        //pour determiner si un tableau contient une valeure precise j'utilise la methode includes, je passe la valeur cherchée en argument dans ma methode
+
+        let language = ["html", "css", "js"];
+        let verif = language.includes("css");
+        console.log(verif); //affiche true car il a trouver css dans le tableau
+
+        //pour fusionner differents tableaux entre eux pour en créer un nouveau, j'utilise la methode concat
+
+        let totalTableau = language.concat(couleur, monTableau, array4Dimensions)
+        console.log(totalTableau);
+        
+
+    </script>
+
+
+</body>
+</html>

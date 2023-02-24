@@ -13,14 +13,14 @@
     <script>
 // pour initialiser un nombre il suffit de l'ecrire sans guillemets
 
-        const a = 5 * 10;
-        const b = 10 / 2;
-        const c = 15 - 5;
-        const d = 5 % 10;
-        console.log(d)
+        const A = 5 * 10;
+        const B = 10 / 2;
+        const C = 15 - 5;
+        const D = 5 % 10;
+        console.log(D)
 // nous pourrons effectuer tout types de calculs
-        const e = a + b;
-        console.log(e)
+        const E = A + B;
+        console.log(E)
 
 // addition:
         let addition = 10 + 5;
@@ -58,14 +58,26 @@
 //-------------------Incrémentation et décrémentation---------------------//
 
 // nous pouvons ajouter 1 ou enlever 1 discretement avec ++ ou --
-        let h = 50;
-        h++ // +1=51
-        h-- // -1=50
-        console.log(h)
+        let H = 50;
+        H++ // +1=51
+
+        H-- // -1=50
+        console.log(H)
+// i++ affecte la valeur puyisb fait l'incrementation
+        let I = 1
+        let J = I++
+        console.log(I); // = 1
+        console.log(J); // = 2
+        console.clear(); // nettoyer la console
+
+// ++k incrémente puis affecte la valeur, dans l'eemple ci dessous ++k incrementera la valeur de k puis retournera la valeur incrémentée
+        let k = 1
+        let l = ++k
+        console.log(l);
 
 
 // Exercice:
-        //récuperez dans un prompt la valeur souhaitée par l'utilisateur
+        // récuperez dans un prompt la valeur souhaitée par l'utilisateur
         // envoyer une alerte indiquant le résultat au carré et au cube de la valeur 
 
         let valeur = prompt("entrez votre valeur");

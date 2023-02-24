@@ -11,12 +11,12 @@
 </head>
 <body>
     <script>
-        const prenom = "Sadek ";
-        const nom = "SEBIHI";
-        document.write(prenom + nom + "<br>")
+        const PRENOM = "Sadek ";
+        const NOM = "SEBIHI";
+        document.write(PRENOM + NOM + "<br>")
 
-        const prenom2 = "Guts", nom2 = "Devilman"
-        document.write(prenom2 + " " + nom2 + "<br>")
+        const PRENOM2 = "Guts", NOM2 = "Devilman"
+        document.write(PRENOM2 + " " + NOM2 + "<br>")
 
         let a = 10;
         let b = 5;
@@ -32,6 +32,28 @@
         let age = prompt("entrez votre age svp: ")
         document.write("Vous avez " + age + " ans!")
 
+        let fruit = "Pomme";
+        console.log(fruit);
+        fruit += "fraise";
+        console.log(fruit);
+        fruit += "ananas";
+        console.log(fruit);
+        // Contrairement au "=" d'affectation qui remplace la valeur de la variable, j'utilise ici "+=" qui va ajouter la valeur a la variable
+
+        let quelquechose; 
+        console.log(quelquechose);
+        // affiche "undefined" dans la console parce que la variable n'a pas été definie, elle n'a pas de valeur
+
+        // console.log(autreChose);
+        //Affiche une erreur parce que la variable n'existe pas, il faut la definir
+
+        let unNombre = "24";
+        console.log(typeof unNombre); //retourne: string (chaine de caractere)
+        //pour convertir une valeur string en number il faut utiliser "parseFloat(lavariable)"
+        unNombre = parseFloat(unNombre);
+        //pour convertir une valeur number en string il faut utiliser "lavariable.toString()"
+        unNombre = unNombre.toString();
+        console.log(unNombre);
 
         
 

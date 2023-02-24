@@ -14,7 +14,7 @@
 //---------------Les differents types de valeurs---------------//
 
 // Il existe plusieurs types de valeures que l'ont peut assigner à nos variables:
-        // on a les chaines de caracteres (les strings) cela peut être une phrase entre guillemets , simple ou double
+        // les strings : on a les chaines de caracteres cela peut être une phrase entre guillemets , simple ou double
         // les nombres : 5, 10, 12.8
         // booléen: en true ou false
         // tableau (array) : entre crochets ["Julien", 10]
@@ -24,7 +24,7 @@
         // fonctions
 
 // String :
-        let variable = "test"
+        let variable = "test" 
         console.log(variable);
         let variable2 = 'test2'
         console.log(variable2);
@@ -33,7 +33,13 @@
         console.log(monTexte);
         let monTexte2 = 'Voici une phrase écrite en simple quote'
         console.log(monTexte2);
-
+        let monTexte3 = "Voici une phrase écrite aujourd\'hui"
+        // l'antislash permet d'echapper un caractere dans le string
+        let bienvenue = `Aujourd'hui c'est l'arrivée de Sahar`;
+        console.log(bienvenue);
+        const PRENOM = "Sadek"
+        bienvenue = `Aujourd'hui c'est l'arrivée de ${PRENOM}`
+        console.log(bienvenue);
 // Number :
         let chiffre = 55;
         //sans les quotes pour les numbers (tout les chiffres: les positifs, les negatifs et les decimaux)
@@ -56,7 +62,7 @@
 
 
 //---------------------Les Affichages---------------------//
-// pour voir nos variables dans le html
+// pour voir nos variables sur la page html
         document.write(variable);
 
 //les boites de dialogues:
