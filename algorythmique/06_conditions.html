@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Les conditions">
+    <title>JS - Les conditions</title>
+</head>
+<body>
+    <style>h2 {color: rgb(118, 4, 247) ; text-align: center ; text-decoration: underline ;} h3 {color: rgb(8, 168, 221)};</style>
+
+    <script>
+        let br = "<br>"
+//----------------Conditions et opérateurs de comparaison----------------//
+//I - Opérateur de comparaisons pour structures conditionelles
+
+        document.write("<h2>I- Opérateur de comparaisons pour structures conditionelles :</h2>")
+
+        // > c'est strictement superieur
+        // < c'est strictement inferieur
+        // >= c'est egal ou superieur
+        // <= c'est egal ou inferieur
+        // == pour faire une comparaison entre 2 valeurs
+        // === pour faire une comparaison d'une valeur et d'un type, signnifie strictement egal à
+        // != différent de, en valeur
+        // !== strictement different de, valeur et type
+
+
+        let nbr1 = 1, nbr2 = 2, nbr3 = 1, nbr4 = "1"
+        document.write(nbr1 > nbr2) // false
+        document.write(br)
+        document.write(nbr1 < nbr2) // true
+        document.write(br)
+        document.write(nbr1 >= nbr2) // false
+        document.write(br)
+        document.write(nbr1 <= nbr2) // true
+        document.write(br)
+        document.write(nbr3 == nbr4) // true
+        document.write(br)
+        document.write(nbr3 === nbr4) // false
+        document.write(br)
+
+
+        document.write("<h2>II- Opérateurs logique :</h2>")
+
+//II- Opérateur logiques:
+
+        // and c'est &&
+        // or c'est ||
+        // not c'est !
+
+        // L'opérateur AND && evalue le resultat en true si les expressions sont TRUE. Si l'une des deux expressions est False alors le resultat sera False
+        document.write("<h3>- Opérateurs AND && :</h3>")
+        document.write(br)
+        document.write(true && true) // vrai
+        document.write(br)
+        document.write(true && false) // faux
+        document.write(br)
+        document.write(false && false) // faux
+        document.write(br)
+
+
+        // L'operateur OR || evalue le resultat en true si une ou deux sest true, si les deux expressions sont false le resultat sera FALSE
+
+        document.write("<h3>- Opérateurs OR || :</h3>")
+        document.write(br)
+        document.write(false || false) // faux
+        document.write(br)
+        document.write(true || true); // vrai
+        document.write(br);
+        document.write(true || false); // vrai
+
+
+        //L'opérateur NOT ! il transforme ce qui TRUE en FALSE et ce qui est FALSE en TRUE
+        document.write("<h3>Opérateurs NOT ! :</h3>")
+        document.write(!true);
+        document.write(br);
+        document.write(!false);
+
+//III- Structures conditionnelles if, else if, else :
+        document.write("<h2>III- Structures conditionnelles if, else if, else :</h2>")
+
+        //---------Syntaxe
+
+        if (true) {
+                            //si le code est vrai
+        } else {
+                            //si le code est faux
+        }
+
+
+
+        if (true) {
+                            // le code si condition vrai
+        } else if (true) {
+                            // le code si condition vrai
+
+        } else {
+                            //si le code est faux
+        }
+
+        let a = 10, b = 5, c = 2;
+        if (a > b){ //si a est superieur à b (si c'est true) alors il execute le code
+            document.write("<p> A est bien superieur a B </p>");
+        } else { //sinon dans tout les autres cas il execute ce code
+            document.write("<p> A est inférieur a B </p>");
+        }
+
+        //IF avec AND:
+
+        if ((a > b) && (b > c)) {
+            document.write("<p> OK pour les deux conditions </p>");
+
+        } else {
+            document.write("<p> Une des deux consition n'est pas vrai</p>");
+
+        }
+
+        //IF avec OR:
+
+        if ((a == 9) || (b < 9)) { //faux et vrai
+            document.write("<p> OK si l'une des condition est vrai </p>"); //donc vrai, le code s'executera
+
+        } else {
+            document.write("<p> si les deux sont faux </p>");
+
+        }
+
+
+        //if / else if / else :
+
+        if (a == 10) {
+            document.write("<p> a est egal a 10 </p>"); // faux
+
+        } else if (a < b){
+            document.write("<p> a est superieur à b </p>"); // faux
+        } else {
+            document.write("<p> tout le monde a faux </p>");
+
+        
+
+        }
+
+
+        // avec que des IF les conditions sont toutes executées et si lune desz conditions est vrai le resultat est affiché
+
+        if (a == 10) {
+            document.write("<p> a est egal a 8 </p>"); // faux
+
+        } 
+        if (a > 10){
+            document.write("<p> a est egal a 10 </p>"); // faux
+        } 
+        
+        if (a < b) {
+            
+            document.write("<p> tout le monde a faux </p>");
+        }
+
+        // IF avec des variables false 
+
+        let test = 3 < 1;
+
+        if (!test) {
+            document.write("<p> execute le code </p>");
+            console.log(test);
+            console.log(!test);
+
+
+        }
+
+        //----------------Exercice-----------------//
+//demandez a l'utilisateur son age
+// on utilise la condition IF pour verifier l'age de l'utilisateur
+// si il est majeur je lui souhaite la bienvenue
+// si il est mineur je lui conseille d'aller faire dodo
+
+        let age = parseFloat(prompt("Quel age avez vous?")) //parseFloat pour que l'utilisateur ne puisse mettre que des chiffres
+        
+        if (age >= 18 && Number.isInteger(age)) {   //Number.isInteger() verifie que la variable contient bien un nombre entier
+            document.write("Bienvenue à vous!")
+        } else if (age < 18 && Number.isInteger(age)){
+            document.write("Vas te coucher !!!")
+        }else{
+            document.write("Votre age n'est pas valide..")
+        }
+
+//Condition ternaire nous permet de faire une verification mais sur une seule ligne
+        document.write("<h3>Condition ternaire ! :</h3>")
+
+        let meteo = "pluie"
+        document.write((meteo == "pluie") ? "<p> Je prend un parapluie </p>" : "<p> Mets un short </p>"); // ? c'est un if et : c'est un else
+        // ESt ce que meteo est egal a pluie
+        //- si oui je prend un parapluie
+        //- si non je prend un short
+
+        let monAge = 16;
+        let isMajor = (monAge >= 18) ? "<p> Vous êtes majeur </p>" : "<p> Vous êtes mineur </p>";
+        document.write(isMajor);
+
+//-----Exercice
+        let isMajor2 = (monAge < 13) ? "<p> Rentre chez toi petit </p>" : (monAge < 18) ? "<p> tu n'as pas le droit de boire</p>" : "<p> tu as le droit de boire </p>";
+        document.write(isMajor2);
+
+
+
+// La condition SWITCH
+        document.write("<h3>Condition Switch ! :</h3>")
+// La condition SWITCH répond a des cas bien specifiques
+//Vous devez ecrire chaque condition a l'interieur d'un case et sortir de ce case par un break (stop la condition)
+
+        let valeur = 5 + 3;
+        switch (valeur) {
+            case 5:
+            document.write("La valeur est egale à 5")
+
+                break
+            case 8:
+            document.write("La valeur est egale à 8" + "<br>")
+
+                break
+            case 12:
+            document.write("La valeur est egale à 12")
+
+                break
+            default:
+            document.write("La valeur est indeterminée")
+
+                break;
+                document.write(br)
+        }
+        
+
+//-----Exercice:
+
+//j'arrive sur un espace securisé au moyen du prenom et de l'age
+//je dois saisir mon prenom et mon age pour m'identifier sur le site (au prealable stockées dans des variable prenom et age)
+// en cas d'echec une alerte m'informe du probleme
+// si tout va bien un message de bienvenue m'accueille
+        
+
+        let identifiant = "sadek";
+        let age3 = 38;
+
+        let login = prompt("saisissez votre identifiant")
+        let verifAge = parseFloat(prompt("Saisissez votre age"))
+        login = login.toLocaleLowerCase(); // toLocaleLowerCase() pour tout mettre en minuscule et toLocaleUpperCase() pour tout mettre en majuscule
+        if (identifiant === login && age3 === verifAge) {
+            alert("Bienvenue " + identifiant + " !" + " Vous etes connecté !")
+
+        } else {
+            alert("Identifiant ou age incorrect")
+
+        }
+
+
+//-------------Exercice 6 :
+
+        //utilisez la methode slice : tranche pour renvoyer le mot "bananas".
+        let txt = "i can eat bananas all day"
+
+        // Alerter le nombre d'éléments dans un tableau, en utilisant la bonne methode de tableau
+        let cars = ["Volvo", "Jeep", "Mercedes"]
+
+        //utilisez la splice methode pour supprimer "Orange" et "apple" de fruit
+        let fruits = ["banane", "orange", "Pomme", "kiwi"]
+
+        //Choisissez l'operateur conditionnel ternaire correct pour alerter "trop jeune" si l'age est inferieur a 18 ans, sinon alerter assez vieux
+
+        //on recoit un nombre, par exemple var number = 42; comment savoir de combien de dizaine (4) et d'unité (2) est composé ce nombre ? avec l'operateur modulo
+
+        //utilisez la methode string correcte pour remplacer le mot "hello" par le mot "welcome"
+        let txt2 = "hello world";
+
+        //utilisez les caractere d'echappement pour alerter (We are "Vikings")
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
