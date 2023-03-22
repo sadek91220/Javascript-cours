@@ -1,0 +1,80 @@
+<!-- Le javascript sert à créer des sites interactifs, il permet aussi d'avoir une meilleur experience utilisateur (meilleur referencement au niveau moteur de recherche) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Les boucles">
+    <title>JS - Les boucles</title>
+</head>
+<body>
+    <style>h1 {color: blueviolet;} h2 {color: blueviolet;} h1,h2{text-decoration: underline;}</style>
+    <script>
+        document.write('<h1> Les boucles :</h1>')
+        //les boucles nous permettent 
+        // une boucle respecte une consition
+        //tant que cette condition est respectée nous allons effectuer des instructions en boucle
+        //la plupart du temps nous utilisons les boucles pour passer sur chaque élément d'un array
+        //il y a different types de boucles, les plus utilisés sont la boucle "FOR" et la boucle "WHILE"
+
+        //boucle FOR ------------------------------------------------------------------------
+        document.write('<h2> Les boucles FOR :</h2>')
+
+        //Syntaxe:
+        //for(3 arguments: initialisation ; condition de continuation ; incrémentation) {
+        //     le code a executer
+        //}
+
+        for (let i = 0; i <= 10; i++) {
+            document.write(`<p> Instructions executées ${i} </p> `);
+            
+        }
+
+        document.write("<hr>")
+        // i=0 pour initialiser la booucle ( à partir de 0 dans ce cas)
+        // i<= 10 tant que la valeur est inferieure a 10
+        //i++ j'incremente un tour de boucle
+
+        for (let i = 0; i <= 10; i+=2) {
+        document.write(`<p> Instructions executées ${i} </p> `);
+        }
+
+        let users = ["Sahar ", "Zaahid ", "Bakary ", "Ludovic " ]
+        for (let i= 0; i < users.length; i++) {
+            //console.log(users[0]) Sahar
+            //console.log(users[1]) Zaahid
+            //console.log(users[2]) Bakary
+            //console.log(users[3]) Ludovic
+            document.write(users[i]);
+            
+        }
+
+        document.write("<hr>")
+        document.write("<br>")
+
+        //boucle WHILE (tant que) ------------------------------------------------------------------------
+        document.write('<h2> Les boucles WHILE :</h2>')
+
+        //Syntaxe:
+        // while(expression qui est soit TRUE ou FALSE) {
+        //     le code a executer tant que l'expression est TRUE//
+        //}
+
+        let i = 0 // on initialise une variable à 0 
+        while (i <= 5) { //tant que i est inferieur ou egal à 5
+            document.write(i + "----");
+            i++
+        }
+
+        document.write("<hr>")
+        document.write("<br>")
+
+
+
+    </script>
+
+
+</body>
+</html>

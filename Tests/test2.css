@@ -1,0 +1,437 @@
+body {
+
+    
+    color: aqua;
+}
+.color-change-2x {
+    animation: color-change-2x 15s ease infinite alternate both;
+}
+
+  @keyframes color-change-2x {
+    0% {
+      background:#0f0013
+    }
+    50% {
+        background:#010003
+      }
+    100% {
+      background: #110020;
+    }
+  }
+
+.sun {
+    display: none;
+}
+
+main {
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.systSol{
+	height: 200px;
+	border-bottom: 3px black groove;
+	position: relative;
+}
+#terre {
+
+	cursor: pointer;
+}
+.systSol div{
+    
+   width: 100%; 
+
+}
+main img {
+    animation: planetRotation 228s linear 0s infinite normal forwards;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.sunmin img{
+	width: 151px;
+	
+}
+.jupiter img {
+	/* width: 699px; */
+}
+
+.pluton img {
+	/* width: 11px; */
+}
+
+.mars img {
+	/* width: 33px; */
+}
+.earth img {
+	/* width: 63px; */
+}
+.neptune img {
+	/* width: 246px; */
+}
+.saturn img {
+	/* width: 582px; */
+}
+.venus img {
+	/* width: 60px; */
+}
+.mercury img {
+	/* width: 24px; */
+}
+.uranus img {
+	/* width: 253px; */
+}
+.eris img {
+	/* width: 11px; */
+}
+
+@keyframes planetRotation {
+	0% {
+		transform: rotate(0);
+
+	}
+
+	100% {
+		transform: rotate(360deg);
+
+	}
+}
+
+/* .systSol .jupiter{
+    width: 15rem;
+    animation: elipseJup 60s linear 0s infinite normal forwards;
+}
+@keyframes elipseJup {
+	0% {
+		transform: translateX(0) rotateY(0) scale(1);
+        
+        z-index: -1;
+	}
+    25% {
+		transform: translateX(-350px) rotateY(-30deg) scale(0);
+		z-index: -1;
+	}
+    50% {
+		transform: translateX(-500px) rotateY(-30deg) scale(1);
+		z-index: -1;
+	}
+    75% {
+		transform: translateX(-250px) rotateY(-30deg) scale(2);
+        z-index: 2;
+	}
+
+	100% {
+		transform: translateX(0px) rotateY(0deg) scale(1);
+	}
+}
+
+.systSol .mars{
+
+    animation: elipseMar 50s linear 0s infinite normal forwards;
+}
+@keyframes elipseMar {
+	0% {
+		transform: translateX(0) rotateY(0) scale(1);
+        
+        z-index: -1;
+	}
+    25% {
+		transform: translateX(-350px) rotateY(-30deg) scale(0);
+		z-index: -1;
+	}
+    50% {
+		transform: translateX(-700px) rotateY(-30deg) scale(1);
+		z-index: -1;
+	}
+    75% {
+		transform: translateX(-350px) rotateY(-30deg) scale(2);
+        z-index: 2;
+	}
+
+	100% {
+		transform: translateX(0px) rotateY(0deg) scale(1);
+	}
+}
+
+.systSol .venus{
+
+    animation: elipseVen 52s linear 0s infinite normal forwards;
+}
+@keyframes elipseVen {
+	0% {
+		transform: translateX(0) rotateY(0) scale(1);
+        
+        z-index: -1;
+	}
+    25% {
+		transform: translateX(-600px) rotateY(-30deg) scale(0);
+		z-index: -1;
+	}
+    50% {
+		transform: translateX(-1000px) rotateY(-30deg) scale(1);
+		z-index: -1;
+	}
+    75% {
+		transform: translateX(-350px) rotateY(-30deg) scale(3);
+        z-index: 2;
+	}
+
+	100% {
+		transform: translateX(0px) rotateY(0deg) scale(1);
+	}
+}
+
+.systSol .uranus{
+
+    animation: elipseUra 60s linear 0s infinite normal forwards;
+}
+@keyframes elipseUra {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: -2;
+	}
+    25% {
+		transform: translateX(-450px) rotateY(-30deg) scale(1);
+        z-index: -2;
+	}
+    50% {
+		transform: translateX(-900px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(-600px) rotateY(-30deg) scale(3);
+        z-index: 2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+	}
+}
+
+.systSol .pluton{
+
+    animation: elipsePlu 60s ease 0s infinite normal forwards;
+}
+@keyframes elipsePlu {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: -1;
+	}
+    25% {
+		transform: translateX(-400px) rotateY(-30deg) scale(1);
+        z-index: -2;
+	}
+    50% {
+		transform: translateX(600px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: 2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+	}
+}
+
+.systSol .earth{
+
+    animation: elipseEar 60s linear 0s infinite normal forwards;
+}
+@keyframes elipseEar {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: 1;
+	}
+    25% {
+		transform: translateX(600px) rotateY(-30deg) scale(1);
+        
+	}
+    50% {
+		transform: translateX(900px) translateY(50px) rotateY(-30deg) scale(1);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: -2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+        
+	}
+}
+
+.systSol .neptune{
+
+    animation: elipseNept 60s linear 0s infinite normal forwards;
+}
+@keyframes elipseNept {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: 1;
+	}
+    25% {
+		transform: translateX(400px) rotateY(-30deg) scale(1);
+        
+	}
+    50% {
+		transform: translateX(800px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: 2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+	}
+}
+
+.systSol .eris{
+
+    animation: elipseEri 59s linear 0s infinite normal forwards;
+}
+@keyframes elipseEri {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: 1;
+	}
+    25% {
+		transform: translateX(600px) rotateY(-30deg) scale(1);
+        
+	}
+    50% {
+		transform: translateX(900px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: -2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+}
+}
+.systSol .mercury{
+
+    animation: elipseMer 60s linear 0s infinite normal forwards;
+}
+@keyframes elipseMer {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: 1;
+	}
+    25% {
+		transform: translateX(600px) rotateY(-30deg) scale(1);
+        
+	}
+    50% {
+		transform: translateX(900px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: -2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);		transform: translateX(0);
+        transform: scale(1);
+        z-index: 1;
+	}
+
+
+}
+
+.systSol .saturn{
+
+    animation: elipseSat 62s linear 0s infinite normal forwards;
+}
+@keyframes elipseSat {
+	0% {
+		transform: translateX(0) rotateY(0) scale(2);
+        
+        z-index: 1;
+	}
+    25% {
+		transform: translateX(600px) rotateY(-30deg) scale(1);
+        
+	}
+    50% {
+		transform: translateX(900px) rotateY(-30deg) scale(2);
+        
+	}
+    75% {
+		transform: translateX(600px) rotateY(-30deg) scale(3);
+        z-index: -2;
+	}
+
+
+	100% {
+		transform: translateX(0px) rotateY(30deg) scale(2);
+	}
+} */
+
+
+.planete {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.sunmin p {
+
+    
+}
+
+/* .sunmin p:hover {
+    animation: animNomPla 1s ease 0s 1 normal forwards;
+	
+}
+@keyframes animNomPla {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(100);
+	}
+} */
+
+#field {
+	height: 400px;
+
+	position: relative;
+  }
+  
+  #ball {
+	position: absolute;
+	cursor: pointer;
+  }
+  #terre {
+	position: absolute;
+	cursor: pointer;
+  }

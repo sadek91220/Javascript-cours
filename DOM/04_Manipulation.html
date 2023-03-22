@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ 
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="04_manipulation.css">
+    <title>Title</title>
+</head>
+
+<body>
+  <header>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Cours Javascript : Manipulation</h1>
+          
+        </div>
+      </div>
+  </header>
+  <main class="container mb-5">
+    <section class="row py-4 my-0 mx-auto">
+        <div class="col-12 mb-5">            
+            <h2>Validation du formulaire</h2>
+        </div >
+        <div class="col-9">
+            <form action="#" method="post" id="form-inscription">
+              <!-- div pour verifier l'erreur sur les champs vides-->
+              <div id="info"></div>
+                <!-- champ prenom -->
+                <div class="mb-2">
+                    <label for="prenom">Votre prenom</label>
+                    <input type="text" class="form-control" id="name" placeholder="Jean" name="prenom">
+                    <div class="erreur"></div>
+                </div>
+                <!-- champ nom -->
+                <div class="mb-2">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Doe" name="nom">
+                    <div class="erreur"></div>
+                </div>    
+                 <!-- champ email  -->
+                <div class="mb-2">
+                    <label for="mail">Votre Email</label>
+                    <input type="text" class="form-control" id="mail" placeholder="Jeandoe@test.com" name="mail">
+                    <div class="erreur"></div>
+                </div>  
+                <!-- champ mot de passe  -->
+                <div class="mb-2">
+                    <label for="mdp">Votre mot de passe</label>
+                    <input type="text" class="form-control" id="mdp" name="mdp">
+                    <div class="erreur"></div>
+                </div>  
+                <!-- champ confirmation de mot de passe  -->
+                <div class="mb-2">
+                    <label for="confmdp">Confirmez votre mot de passe</label>
+                    <input type="password" class="form-control" id="confmdp" name="confmdp">
+                    <div class="erreur"></div>
+                </div>
+                
+                <button type="submit" id="submit" class="btn btn-success">S'inscrire</button>
+
+
+
+            </form>
+        </div>
+    </section>
+    <section class="mt-5">
+      <div class="col-12 mb-5">            
+        <h2>Keydown</h2>
+      </div >
+      <img src="./mario.png" alt="image de Mario" id="mario">
+
+
+    </section>
+    <section class="mt-5">
+      <div class="col-12 mb-5">            
+        <h2>Carousel d'image dynamique</h2>
+      </div >
+      <div class="carousel">
+      <i class="bi bi-chevron-double-left" id="left"></i>
+      <img src="chat1.jpg" alt="" id="carousel">
+      <i class="bi bi-chevron-double-right" id="right"></i>
+      </div>
+
+
+    </section>
+
+  </section>
+  <section class="mt-5">
+    <div class="col-12 mb-5">            
+      <h2>Carousel d'image automatique</h2>
+    </div >
+    <div class="carousel">
+    <img src="chat5.jpg" alt="" id="slider">
+
+    </div>
+
+
+  </section>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="04_manipulation.js"></script>
+</body>
+
+</html>

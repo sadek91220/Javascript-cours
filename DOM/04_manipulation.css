@@ -1,0 +1,50 @@
+.error{
+    border: 2px solid red;
+}
+
+.valid {
+    border: 2px solid rgb(13, 250, 183);
+}
+
+form > div {
+    position: relative;
+}
+
+.erreur {
+    position: absolute;
+    top: 0;
+    right: -3px;
+    font-style: 10px;
+    width: 300px;
+}
+
+/* keydown */
+
+section:nth-child(2){
+    position: relative;
+    height: 300px;
+}
+
+#mario {
+    position: absolute;
+}
+
+.carousel img{
+    width: 300px;
+    height: 400px;
+}
+
+i {
+    font-size: 30px;
+    color: #ff3366;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+h2 {
+    color: #ff3366;
+}

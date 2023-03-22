@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="sadek sebihi">
+    <meta name="description" content="cours JS - Fonction">
+    
+    <title>JS - Les fonctions</title>
+</head>
+<body>
+    <h1>Les Fonctions :</h1>
+    <script>
+
+    document.write('<h2> Les fonctions predefinis et utilisateur :</h2>')
+    //le js possede des functions, ce sont des morceaux de code encapsulé qu'on appelle au besoin pour executer une action precise.
+    // on distingue les functions predefinis et les functions utilisateur
+
+    document.write('<h3> Les fonctions predefinis :</h3>')
+
+
+    // let testNumber = 1.555555555;
+    // let number = testNumber.tofixed(2)
+    // document.write(typeof number + ' ')
+    // tofixed() defnis un nombre de chiffre apres la virgule, par contre cela retourne une chaine de caracteres
+    // document.write(typeof parseFloat(number))
+
+    let testMath = Math.pow(2,3) // puissance 3
+    let testMath1 = Math.PI // 3.14
+    let testMath2 = Math.floor(1.9) // il va chercher le chiffre entier inferieur
+    let testMath3 = Math.max(10,8,14,50,6)// il retourne la valeur la plus haute
+    let testMath4 = Math.min(10,8,14,50,6)// il retourne la valeur la plus basse
+    let testMath5 = Math.random()// il retourne une valeur au hasard a chaque rafraichissement 
+
+
+    //je veux un nombre entier entre 0 et 100 de façon
+    let nombre = Math.random() * 100
+    document.write(nombre + "<br>")
+    document.write(Math.round(nombre) + "<br>")
+
+// Les fonctions predefinis dans les chaines de caracteres
+    document.write('<h3> Les fonctions predefinis dans les chaines de caracteres :</h3>')
+
+
+        let phrase = "Salut";
+        document.write(phrase.length + "<br>");// il retourne le nombre de caracteres (length compte a partir de 1)
+        document.write(phrase.indexOf("u") + "<br>");// il retourne la position de l'argument passé en parametre (index compte a partir de 0)
+        document.write(phrase.toLowerCase() + "<br>");// il transforme le texte en minuscule
+        document.write(phrase.toUpperCase() + "<br>");// il transforme le texte en majuscule
+
+        let phrase2 = `       du texte        `
+        document.write(phrase2.trim() + "<br>");// il enleve les espaces avant et apres
+
+        let phrase3 = `metro, boulot, dodo`
+        console.log(phrase3.split(",")); // il retourne un tableau a partir d'une chaine de caractere
+
+
+
+
+//Les fonctions utilisateur:
+    document.write('<h3> Les fonctions utilisateurs :</h3>')
+
+//l'un des grand principes en programation est d'avoir un code DRY ( don't repeat yourself)
+//les fonctions sont des bloc de code reutilisable et modifiable à volonté
+
+//Initialisation (ou declaration) de la fonction
+
+        function maFonction() {
+            document.write("<p> ma premiereFonction </p>"+ "<br>");
+
+        }
+
+        maFonction(); //execution de la fonction, en executant une fonction  nous executons le code qui se trouve a l'interieur de ma fonction
+
+        //autre syntaxe pour declarer une fonction
+        //consiste à assigné une fonction à une variable
+
+        let direBonjour = function() {
+            document.write('<p> Bonjour tout le monde!</p>')
+        }
+        direBonjour()
+
+
+
+// fonction avec parametre:
+
+    // afin que notre fonction soit parametrable nous allons utiliser des parametres
+        function direBonjour1(prenom){
+            document.write(`<p> Bonjour ${prenom}!</p>`)
+
+        }
+        direBonjour1('Sahar')
+
+    //vous pouvez mettre autant de parametre que necessaire
+
+//fonction avec deux variables en parametre:
+
+        function direBonjour2(nom, age){
+            document.write(`<p> Bonjour ${nom} tu as ${age} ans!</p>`)
+
+        }
+        direBonjour2('Ferchichi', 25)
+
+        function addition(numberA, numberB){
+            document.write(numberA + numberB)
+        }
+        addition(5,10)
+
+
+//Protection des fonctions :
+        function direSalut(prenomSalut = "") { // pour securisé une fonction on met = "" pour dire qu'on accepte que ce soit vide
+        document.write(`<p> Bonjour ${prenomSalut}!</p>`)
+
+        }
+        direSalut()
+
+
+//creation d'une fonction comme raccourci de document.write
+        function d(content, balise) {
+           if (balise ===1) {
+            document.write(`<h2>${content}!</h2>`)
+
+           } else {
+            document.write(`<p>${content}!</p>`)
+
+           } 
+        }
+        d("Titre",1) //affiche un h2
+        d("Titre") // affiche un <p>
+
+
+//Fonction avec return:
+            function calculaAge(anneeActuelle, anneeNaissance) {
+                return anneeActuelle - anneeNaissance
+                //pour extraire le resultat et le stocker dans une variable nous utilisons un return
+                //attention tout ce qui se trouve apres le return ne s'execute pas
+                //return arrete completement l'execution d'une fonction
+            }
+
+            let age6 = calculaAge(2023,2017)
+            d(age6)
+
+
+            //il existe une autre façon pour ecrire nos fonctions 
+            let maFonction2 = (x,y) => {
+                d(x + y);
+            }
+            maFonction2(5,2)
+
+            //la fonction flechée: les {} ne sont pas necessaire si il n'y a qu'une seule instruction 
+            let maFonction3 = (f,r) => f * r
+            let resultat = maFonction3(6,5)
+            d(resultat)
+//-------------------------------------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------------------------------------------------------------------------------------------------------//
+
+//---I---------------------------------------------------------------------------------------------------------------------------------------------//
+
+        
+
+            d("la portée des variables")
+// en js il existe 2 espaces de portée differentes, l'espace locale et et l'espace global
+// l'espace global l'entiereté d'un script a l'exception de l'interieur des fonctions
+// l'espace local designe a l'inverse l'espace qui se trouve dans la fontion
+
+// attention evitons de declarer plusieures variables dans different espaces en utilisant un meme nom
+//ici on le fait pour la demo
+
+
+// deuc variables globale:
+            let x = 5 ;
+            let y = 10;
+
+            function portee1() {
+                d(`Depuis portée1() la valeur de x est ${x}la valeur de y est ${y}`)
+            }
+            portee1()
+            //ici nos variables portent le meme nom que nos variable de la ligne 172/173. Bien qu'elles portent le meme nom dù a leurs portées differentes ce sont 4 entitées differentes.
+            // le x de la ligne 172 n'est pas le meme x que celui de la ligne 184
+            //une variable locale(dans la fonction) ne marche que dans cette meme fonction (meme si elle est dans une autre fonction)
+
+            function portee2(){
+                let x = 20;
+                let y = 40;
+                d(`Depuis portée2() la valeur de x est ${x}la valeur de y est ${y}`)
+
+            }
+            portee2()
+
+            d(`lorsque je me trouve en dehors d'une fonction espace global, x contient la valeur ${x} et y contient la valeur ${y}`)
+
+            function portee3() {
+                let a = 1;
+                let b = 2;
+
+                d(`Depuis portée3() la valeur de a est ${a} la valeur de b est ${b}`)
+
+            }
+            // portee3()
+            // d(`Depuis portée3() la valeur de a est ${a} la valeur de b est ${b}`)
+
+            //on a une erreur lorsqu'on execute le code si dessus, a ayant une portée locale la variable n'est pas reconnu et le navigateur nous previent que cette variable n'a pas été definie
+    </script>
+ 
+    
+
+
+    <!-- <script src="./exercice.js"></script> -->
+</body>
+</html>

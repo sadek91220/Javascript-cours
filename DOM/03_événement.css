@@ -1,0 +1,68 @@
+#rouge {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 0, 0, 0.575);
+    line-height: 150px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: auto;
+    
+}
+#orange {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 111, 0, 0.575);
+    line-height: 150px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: auto;
+    
+}
+#info {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 162, 255, 0.575);
+    line-height: 150px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: auto;
+    
+}
+
+#primary {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 255, 208, 0.575);
+    line-height: 150px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: auto;
+    
+}
+
+#success {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: auto;
+    
+}
+
+.vert {
+    background-color: rgba(0, 255, 153, 0.575);
+}
+
+.gold {
+    background-color: gold;
+    border-radius: 50%;
+}
+.hide {
+    display: none;
+}

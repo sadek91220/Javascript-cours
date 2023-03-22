@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="test2.css">
+  
+  <title>Notre Systeme Solaire</title>
+</head>
+
+<body class="color-change-2x">
+
+  <header>
+    <!-- place navbar here -->
+    <!-- Nav tabs -->
+
+  </header>
+  <main>
+    
+    <section class="systSol mx-5 px-5 d-flex align-items-center">
+      
+      <div class="sunmin planete">
+        <img src="./img/System-Sun.512.png" alt="Soleil" class="soleil" >
+        <p>Soleil</p>
+      </div>
+      <div class="m-3 planete eris">
+        <img src="./img/System-Eris.512.png" alt="">
+        <p>Eris</p>
+      </div>
+      <div class="m-3 planete saturn">
+        <img src="./img/System-Saturn.512.png" alt="">
+        <p>Saturne</p>
+      </div>
+      <div class="m-3 planete" id="field">
+        <img src="./img/System-Earth.512.png" alt="" id="ball">
+        
+        <section>
+          <div  id="terre" class="card m-3 border-info" style="width: 50%; background-color: black; top: 240px; left: 5px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./img/sun.png" class="img-fluid rounded-start" alt="Card title">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      </div>
+      
+      <div class="m-3 planete neptune">
+        <img src="./img/System-Neptune.512.png" alt="">
+        <p>Neptune</p>
+      </div>
+      <div class="m-3 planete mercury">
+        <img src="./img/System-Mercury.512.png" alt="">
+        <p>Mercure</p>
+      </div>
+        <div class="m-1 planete jupiter">
+          <img src="./img/System-Jupiter.512.png" alt="">
+          <p>Jupiter</p>
+        </div>
+        <div class="m-3 planete pluton">
+          <img src="./img/System-Pluto.512.png" alt="">
+          <p>Pluton</p>
+        </div>
+        <div class="m-3 planete mars">
+          <img src="./img/System-Mars.512.png" alt="">
+          <p>Mars</p>
+        </div>            
+        <div class="m-3 planete uranus">
+          <img src="./img/System-Uranus.512.png" alt="">
+          <p>Uranus</p>
+        </div>
+        <div class="m-3 planete venus">
+          <img src="./img/System-Venus.512.png" alt="">
+          <p>Venus</p>
+        </div>
+        
+    </section>
+    
+  </main>
+
+
+  <script>
+    function makeEaseOut(timing) {
+      return function(timeFraction) {
+        return 1 - timing(1 - timeFraction);
+      }
+    }
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+
+    function quad(timeFraction) {
+      return Math.pow(timeFraction, 2);
+    }
+
+    ball.onclick = function() {
+
+      let height = field.clientHeight - ball.clientHeight;
+      let width = 100;
+
+      animate({
+        duration: 2000,
+        timing: makeEaseOut(bounce),
+        draw: function(progress) {
+         terre.style.top = height * progress + 'px'
+        }
+      });
+
+      
+    }
+  </script>
+
+
+  
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://js.cx/libs/animate.js"></script>
+  <script src="./test2.js"></script>
+</body>
+
+</html>

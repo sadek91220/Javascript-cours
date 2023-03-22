@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="Author" content="Sadek SEBIHI">
+  <meta name="description" content="Evenement en JS">
+  <link rel="stylesheet" href="./03_événement.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<title>Évenement en JS</title>
+</head>
+
+<body>
+  <header>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Cours JS - EVENEMENT</h1>
+            <p class="col-md-8 fs-4">Les Évenements</p>
+            <p>Du temps à perdre <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" id="interdit">Cliquez ici</a></p>
+        </div>
+    </div>
+  </header>
+  <main class="container mb-5">
+    <section class="row border border-danger p-4 rounded">
+        <div class="col-8">
+        <h2 class="text-danger">addEventListener(), exemple</h2>
+        <p>un simple clic sur la div #rouge</p>
+        <p class="rounded-pill text-white bg-danger" id="p1" onclick="fp1()">Cliquez sur ce paragraphe</p>
+        <!-- l'attribut onclick est purement JS: gestionnaire -->
+    </div>
+    <div class="col-4">
+        <div id="rouge">#rouge</div>
+    </div>
+    </section>
+    <section class="row border border-warning p-4 rounded my-4">
+        <div class="col-8">
+        <h2 class="text-warning">Autre exemple, avec dblclick</h2>
+        <p>un double clic sur la div #orange</p>
+    </div>
+    <div class="col-4">
+        <div id="orange">#orange</div>
+    </div>
+    </section>
+
+    <section class="row border border-info p-4 rounded my-4">
+        <div class="col-8">
+          <h2 class="text-info">Autre exemple, avec mouseover</h2>
+          <p>un hover sur la div #info</p>
+        </div>
+        <div class="col-4">
+          <div id="info">#info</div>
+        </div>
+    </section>
+
+    <section class="row border border-primary p-4 rounded my-4">
+      <div class="col-8">
+        <h2 class="text-primary">Autre exemple, avec mouseout</h2>
+        <p>un hover sur la div #primary</p>
+      </div>
+        <div class="col-4">
+        <div id="primary">#primary</div>
+      </div>
+    </section>
+
+    <section class="row border border-success p-4 rounded my-4">
+      <div class="col-8">
+        <h2 class="text-success">Autre exemple, avec le click puis reclick</h2>
+        <p>click puis reclick sur la div #success</p>
+      </div>
+        <div class="col-4">
+        <div id="success" class="vert">#success</div>
+      </div>
+    </section>
+    <section class="row border border-dark p-4 rounded my-4">
+      <div class="col-6 d-flex flex-column justify-content-center align-items-center mb-5 toggle">
+        <p>Ajouter une classe (la classe hide pour masquer la photo)</p>
+        <p>Enlever une classe (la classe hide pour afficher la photo)</p>
+        <p>Toggle une classe  (la classe hide pour afficher/masquer la photo)</p>
+      </div>
+      <img src="../img/chat.jpg" alt="" srcset="" class="col-6">
+    </section>
+
+    <!-- créons un formulaire -->
+
+    <section class="row border border-dark rounded p-4 my-4">
+      <form class="d-flex flex-column" method="post" action="#">
+        <div class="col">
+          <div class="mb-3">
+            <!-- champs prenom -->
+            <label for="prenom" class="form-label">Votre prenom</label>
+            <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Saisissez votre prenom">
+
+            <div><button type="submit" class="btn btn-primary" id="submit">Envoyer</button></div>
+          </div>
+          <!-- case a cocher -->
+          <h6>Langages</h6>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="html" value="html" name="languages">
+            <label class="form-check-label" for="html" id="labelHTML">HTML</label>
+            </div>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="css" value="css" name="languages">
+            <label class="form-check-label" for="css" id="labelCSS">CSS</label>
+            </div>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="js" value="js" name="languages">
+            <label class="form-check-label" for="js" id="labelJS">JS</label>
+            </div>
+<!-- bouton radio -->
+            <h6 class="mt-5">Appreciation : </h6>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="niveau" id="acquis" value="acquis">
+              <label class="form-check-label" for="acquis">Acquis</label>
+              </div>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="niveau" id="enCours" value="en cours d'acquisition">
+              <label class="form-check-label" for="enCours">En cours d'acquisition</label>
+              </div>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="niveau" id="nonAcquis" value="non acquis">
+              <label class="form-check-label" for="nonAcquis">Non acquis</label>
+              </div>
+        </div>
+      </form>
+    </section>
+
+
+
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="./03_événement.js"></script>
+</body>
+
+</html>

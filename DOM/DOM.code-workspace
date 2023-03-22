@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../algorythmique"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DOM"
+	}
+}
